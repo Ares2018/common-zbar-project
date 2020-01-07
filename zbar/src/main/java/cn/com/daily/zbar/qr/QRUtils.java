@@ -34,7 +34,7 @@ public class QRUtils {
     /**
      * 识别本地二维码
      *
-     * @param path
+     * @param path 本地图片地址
      * @return
      */
     public String decodeQRCode(String path) throws Exception {
