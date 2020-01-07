@@ -37,19 +37,19 @@ public class QRUtils {
      * @param path
      * @return
      */
-    public String decodeQRcode(String path) throws Exception {
+    public String decodeQRCode(String path) throws Exception {
         //对图片进行灰度处理，为了兼容彩色二维码
         Bitmap qrbmp = compressImage(path);
         qrbmp = toGrayScale(qrbmp);
         if (qrbmp != null) {
-            return decodeQRcode(qrbmp);
+            return decodeQRCode(qrbmp);
         } else {
             return "";
         }
 
     }
 
-    public String decodeQRcode(Bitmap barcodeBmp) throws Exception {
+    public String decodeQRCode(Bitmap barcodeBmp) throws Exception {
         int width = barcodeBmp.getWidth();
         int height = barcodeBmp.getHeight();
         int[] pixels = new int[width * height];
@@ -77,7 +77,7 @@ public class QRUtils {
      * @param path
      * @return
      */
-    public String decodeBarCode(String path)  {
+    public String decodeBarcode(String path)  {
         Bitmap qrbmp = BitmapFactory.decodeFile(path);
         if (qrbmp != null) {
             return decodeBarcode(qrbmp);
