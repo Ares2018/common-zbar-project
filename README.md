@@ -9,3 +9,5 @@
      
      
 String content = QRUtils.getInstance().decodeQRCode(path);
+
+jni 编译来源 https://github.com/bertsir/zBarLibary
